@@ -16,7 +16,7 @@ then, run the frontend using the below given command
 
 * **step-3** there is predefined admin in the system
 login into admin panel using the below given admin details
-email: admin@dealership.com
+email: admin@test.com
 password: admin123
 
 ---

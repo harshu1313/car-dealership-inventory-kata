@@ -7,13 +7,6 @@ from fastapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from database import SessionLocal, DBUser, DBVehicle, pwd_context
-import os
-import uvicorn
-
-if __name__ == "__main__":
-    # Render assigns a dynamic port via environment variables
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run("main:app", host="0.0.0.0", port=port)
 
 SECRET_KEY = "super-secret-kata-key"
 ALGORITHM = "HS256"

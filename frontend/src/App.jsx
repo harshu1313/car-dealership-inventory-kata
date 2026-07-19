@@ -18,7 +18,9 @@ export default function App() {
   useEffect(() => { fetchVehicles(); }, []);
 
   const fetchVehicles = async () => {
-    const res = await fetch('http://localhost:8000/api/vehicles');
+    const BACKEND_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    const res = await fetch(`${BACKEND_URL}/api/vehicles`);
+    // const res = await fetch('http://localhost:8000/api/vehicles');
     const data = await res.json();
     setVehicles(data);
   };
